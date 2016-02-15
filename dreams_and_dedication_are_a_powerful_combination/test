@@ -1,0 +1,43 @@
+/* Includes header containing prototypes
+ */
+#include "my_functions.h"
+
+/* Function to print numbers 
+*/
+void print_number(int n) 
+{
+  /* Defines how to find length of numbers and the denominator 
+   */
+  int nu = n; /* Declares integer nu */
+  int length; /* Delares integer length which equals to number of digits */
+  int power = 1; /* Delares integer power which is the denominator */
+
+  /* For negative numbers, '-' will be printed                                                                          
+   */
+  if(nu < 0) {
+    nu = nu * (-1), print_char('-');
+  }
+  
+  /* Loop to find length of numbers ie number of digits
+   */
+  for(length = 0; nu>0; length++) {
+    nu = nu/10;
+  }
+    
+    /* If multiple digits, divide by a multiple of ten 
+     */  
+  while(length > 1) {
+    power = power * 10;
+    length = length - 1;
+  }
+
+  if(nu!=0)
+  {
+    print_number(nu); /* Prints numbers defined in main function  */
+    print_char(nu+48); /* Adds 48 for ascii values */  
+  }
+}
+
+
+
+

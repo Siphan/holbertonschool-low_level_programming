@@ -1,29 +1,33 @@
-/* include header containing prototypes
- */
 #include "my_functions.h"
-#include <stdio.h>
 
-void print_number(int n) 
+void print_number(int n)
 {
-  int nu = n;
-  int length;
-  int power = 1;
-  if(nu < 0) {
-    nu = nu * (-1), print_char('-');
-      }
-  for ( length = 0; nu>0; length++ ) {
-    nu = nu/10;
+  int count,i,temp,j,x; /* Declares integer variables  */
+  temp=0; /* Stores previous result */
+  i=n;
+  
+  for (count=0;i!=0;count++) /* Finds the number of  digits */
+    i=i/10;
+
+  if (n<0)    /* If number is negative, character '-' is printed before number */
+    print_char('-');
+
+  do{   /* Makes loop work for 0 */
+    i=n;
+    x=count;
+
+    for(;x>1;x--){  /* Starts from beginning */
+      i=i/10;
+    }
+    j=i-(temp*10);  /* Subtracts previous value */
+    temp=i;        /* Saves previous value */
+
+    if (j<0){  /* If number is negative, makes number positive */
+      j=j*(-1);
+    }
+    print_char(j+48); /* Add +48 from ascii values */
+    count--;
   }
-    printf("%d\n", length);
-
-while(length > 1) {
-  power = power * 10;
-  length = length - 1;
- }
-
-printf("power %d\n", power);
+  
+  while(count>0);
 }
-
-
-
-
