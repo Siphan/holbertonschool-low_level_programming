@@ -1,0 +1,20 @@
+#include "my_functions.h"
+
+void print_last_digit(int n)
+
+{
+  char c;
+  /* Converts negative integers to positive integers */
+    if (n < 0)
+      {
+	n = (n * -1);
+      }
+    /* If integer is higher than 9, 
+       get remainder (last digit) */
+    if (n > 9)
+      {
+	n = (n % 10);
+      }
+    /* Print character using ascii values */
+        print_char(n + 48);
+}
