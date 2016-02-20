@@ -1,0 +1,25 @@
+#include "my_functions.h"
+
+/* Function looks for multiples of 3 and 5 for integers between 1 and 100 */
+int main(void)
+{
+  int i;
+  for (i = 1; i < 101; i++){
+    if (i % 3 == 0 && i % 5 == 0){ /* Checks if number is a multiple of 3 and 5*/
+      printf("FizzBuzz "); /* Prints "FizzBuzz" if multiple of both 3 and 5 */
+    }
+    else if (i % 3 == 0){ /* Checks if number is a multiple of 3 */
+      printf("Fizz "); /* Prints "Fizz" if multiple of 3 */
+    }
+    else if (i % 5 == 0){ /* Checks if number is a multiple of 5 */
+      printf("Buzz"); /* Prints "Buzz" if multiple of 5 */
+      if (i != 100){ /* Adds space after numbers except for last number */
+	printf(" ");
+      }
+    }
+    else{ /* Prints number as it is when not a multiple of 3 or 5 */
+      printf("%d ", i);
+    }
+  }
+  return 0;
+}
