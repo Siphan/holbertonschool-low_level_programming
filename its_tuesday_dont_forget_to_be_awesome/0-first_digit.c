@@ -5,7 +5,8 @@
 int first_digit(int n) 
 {
   /* Needs long integer data type for the last number INT_MIN
-     to print as it's too long for Vagrant */
+     to print as it's too long for Vagrant 
+  */
   long int o; 
   o = n; /* Reassigning o to n ie int n is now o which is a long int data type */
   
