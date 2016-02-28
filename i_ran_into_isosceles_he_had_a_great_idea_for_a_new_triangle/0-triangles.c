@@ -1,29 +1,34 @@
 #include <stdio.h>
 void triangles_in_the_term(int h, int n) 
 {
-  int i,space,k = 0; /* Declaring i which is the number of rows*/
+  int row, space, star; /* Declaring variable for the number of rows, spaces, and stars */
   int height = h; /* Makes a copy of h because we're using 2 loops with h */
+/* Int n equals the number of triangles */
+  
+  while (n > 0) /* Loop to print number of triangles */
+    {
 
-  while (n > 0) /* Loop to print one triangle */
-    {
-  for(i=1; i<=h ; i++)
-    {
-      for(space=0; space< (height-1); space++) /* Number of spaces to be printed before and after the stars */
+      for(row = 1; row <= h ; row++) /* Loop to print number of rows */
+	{
+	  for(space = 0; space < (height - 1); space++) /* Number of spaces to be printed before and after the stars */
 	{
 	  printf(" ");
 	}
-      height--;
-      while(k != 2*i -1) /* Number of stars to be printed is equal to rows * 2 - 1 */
+      height--; 
+      
+      while(star != 2 * row -1) /* Number of stars to be printed is equal to (rows * 2) - 1 */
 	{
 	  printf("*");
-	  k++;
+	  star++;
 	}
-      k=0;
+      star = 0;
       printf("\n");
     }
-  n--;
-  return;
+      height = h; /* Need to reset the height to h or the spaces will be printed after the stars  */
+      
+  n--; /* End of while loop that defines number of triangles to be printed */
     }
+  return; /* Should be outside of the first while loop to print more than one triangle */
 }
 
   
