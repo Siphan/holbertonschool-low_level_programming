@@ -15,13 +15,13 @@ void triangles_in_the_term(int h, int n)
 	  printf(" ");
 	}
       height--; 
+      star = 0; /* Initialize star variable before using it */
       
-      while(star != 2 * row -1) /* Number of stars to be printed is equal to (rows * 2) - 1 */
+      while(star != (2 * row) -1) /* Number of stars to be printed is equal to (rows * 2) - 1 */
 	{
 	  printf("*");
 	  star++;
 	}
-      star = 0;
       printf("\n");
     }
       height = h; /* Need to reset the height to h or the spaces will be printed after the stars  */
