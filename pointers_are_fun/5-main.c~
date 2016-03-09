@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main(void)
+{
+  int n; /* Declares a variable of type integer n */
+  int *p; /* Declares a variable of type pointer that points to an integer */
+
+  
