@@ -1,40 +1,38 @@
 int print_char(char c);
-/* This function prints each element of an array of integers */
-void print_number(int n);
+/* This functions prints each element of an array of integers */
+void print_number(int num); /* Prototype */
 
-/* Prints out an array of integers separated by commas */
-void print_array(int *a, int n) {
-  int i;
-
-  for (i = 0; i < n; i++) {
-    print_number(a[i]);
-    if (i == (n-1)) {
-      break;
+void print_array(int *a, int n) /* This function calls print_number to print every number pointed by the elements of the array */
+{
+  int i; /* Declaring index of array */
+  i=0;
+  if (n<=0)
+    {
+      print_char('\n');
     }
-    print_char(',');
-    print_char(' ');
-  }
-  print_char('\n');
+      while(i<n) /* If index is lower than number of elements, prints the value of the element */
+	{
+	  print_number(a[i]); /* Prints the value of the element of the array */
+	  print_char(',');
+	  print_char(' ');
+	  i++; /* Incrementing the index to print the next element */
+	  if(i==n)
+	    {
+	  print_number(a[i]); /* Prints the value of the lasty element of the array */
+	    }
+	}
+
 }
 
-void print_number(int n) {
-  int i = 1;
-  int temp;
-  int mod = 1;
-  if (n < 0) {
-    print_char('-');
-    mod = -1;
-  }
-  for(temp = n; temp > 9 || temp < -9; temp = temp / 10) {
-    i++;
-  }
-  while(i) {
-    int i2 = i--;
-    temp = n;
-    while(i2-- > 1) {
-      temp /= 10;
+void print_number(int num) /* Function to print the numbers pointed by the elements of the array */
+{
+/* Number to be printed */
+  int div = 1; /* Denominator to use for large numbers */
+  div=div*10;
+  for(num=0; num>0; num++)
+    {
+      num=num % div; /* Get the modulo */
+      print_char((num+48)); /* Prints modulo */
     }
-    print_char(((temp % 10) * mod + '0'));
-  }
 }
 
