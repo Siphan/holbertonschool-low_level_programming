@@ -1,11 +1,9 @@
 int print_char(char c);
 /* This function prints each element of an array of integers */
 void print_number(int n);
-
 /* Prints out an array of integers separated by commas */
 void print_array(int *a, int n) {
   int i;
-
   for (i = 0; i < n; i++) {
     print_number(a[i]);
     if (i == (n-1)) {
@@ -16,7 +14,6 @@ void print_array(int *a, int n) {
   }
   print_char('\n');
 }
-
 void print_number(int n) {
   int i = 1;
   int temp;
@@ -37,4 +34,3 @@ void print_number(int n) {
     print_char(((temp % 10) * mod + '0'));
   }
 }
-
