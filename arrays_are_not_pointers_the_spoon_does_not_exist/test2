@@ -1,0 +1,37 @@
+int print_char(char c);
+/* This function prints each element of an array of integers */
+void print_number(int num); /* Prototype */
+
+void print_array(int *a, int n) /* This function calls print_number to print every number pointed by the elements of the array */
+{
+  int i; /* Declaring index of array */
+  i=0;
+  if (n<=0)
+    {
+      print_char('\n');
+    }
+      while(i<n) /* If index is lower than number of elements, prints the value of the element */
+	{
+	  print_number(a[i]); /* Prints the value of the element of the array */
+	  print_char(',');
+	  print_char(' ');
+	  i++; /* Incrementing the index to print the next element */
+	  if(i==n)
+	    {
+	  print_number(a[i]); /* Prints the value of the last element of the array */
+	    }
+	}
+}
+
+void print_number(int num) /* Function to print the numbers pointed by the elements of the array */
+{
+/* Number to be printed */
+  int div = 1; /* Denominator to use for large numbers */
+  div=div*10;
+  for(num=0; num>0; num++)
+    {
+      num=num % div; /* Get the modulo */
+      print_char((num+48)); /* Prints modulo */
+    }
+}
+
