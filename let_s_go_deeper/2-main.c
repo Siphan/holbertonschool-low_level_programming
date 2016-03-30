@@ -3,19 +3,19 @@ int square_root(int n);
 
 int main(void)
 {
-  int r;
+  int r; 
 
-  r = square\_root(1);
+  r = square_root(1);
   printf("%d\n", r);
-  r = square\_root(1024);
+  r = square_root(1024);
   printf("%d\n", r);
-  r = square\_root(16);
+  r = square_root(16);
   printf("%d\n", r);
-  r = square\_root(17);
+  r = square_root(17);
   printf("%d\n", r);
-  r = square\_root(25);
+  r = square_root(25);
   printf("%d\n", r);
-  r = square\_root(-1);
+  r = square_root(-1);
   printf("%d\n", r);
   return (0);
 }

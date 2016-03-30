@@ -13,14 +13,3 @@ int findsqrt(int n ,int count) {
 int square_root(int n) {
   return (findsqrt(n, 1));
 }
-
-  /*
-int square_root(int n) {
-  
-  if (){
-    return (-1);  If n does not have an natural square root, the function should return -1  
-  }
-  else {
-  }
-}
-  */
