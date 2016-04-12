@@ -1,14 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 
 int main(void)
 {
-  char *str;
+  char *s;
 
-  str = malloc(sizeof(*str) * 3);
-  str[0] = 'O';
-  str[1] = 'k';
-  str[2] = 0;
-  printf("%s\n", str);
+  while (1)
+    {
+      s = malloc(INT_MAX);
+      if (s == NULL)
+        {
+          fprintf(stderr, "Not enough memory left!\n");
+          return (1);
+        }
+    }
   return (0);
 }
