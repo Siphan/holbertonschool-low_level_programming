@@ -11,7 +11,7 @@ void print_string_struct(struct String *str);
 
 /*
   The function string_to_struct returns a pointer to the struct String
-  and takes a pointer to a char as a paramater
+  and takes a pointer to a char as a parameter
 */
 struct String *string_to_struct(char *str)
 {
