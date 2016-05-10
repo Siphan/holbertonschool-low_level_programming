@@ -1,6 +1,8 @@
-CFLAGS := -Wall -pedantic -Werror -Wextra
-FILES := main.c
-all: $(FILES)
-	gcc $(CFLAGS) $(FILES) -o 0-print_content
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+SRC = main.c
+OBJ = 0-print_content
+all: $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o 0-print_content
 clean:
 	rm 0-print_content

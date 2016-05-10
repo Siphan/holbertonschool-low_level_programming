@@ -1,36 +1,29 @@
-/* Program that prints the content of a file on the standard output */
-#include <sys/types.h>
-#include <sys/stat.h>
+/* Program that prints the content of a file passed as parameter to standard input on the standard output */
 #include <fcntl.h>
-#include <stdio.h>
 #include <unistd.h>
 
-#define BUFF_SIZE 32
-
-int main(void)
+int main(int argc, char **argv)
 {
   int fd; /* Stores our file descriptor in an integer */
-  char buffer[BUFF_SIZE + 1];
-  int len;
+  char buffer;
 
-  fd = open("Holberton", O_RDWR | O_CREAT); /* Open a file called Holberton. If file doesn't exist, creates it */
+  fd = open(argv[1], O_RDONLY); /* Open a file passed as parameter to stdin with read only access mode */
 
-  if (fd == -1) /* If our function open fails, return error */
+  if (argc != 2) /* If the number of arguments is not good, return error */
   {
-    perror("open");
     return(1);
   }
 
-  len = read(fd, buffer, BUFF_SIZE); /* Stores the read function in a variable len */
-    if(len == -1) /* If our function read fails, return error */
-    {
-      perror ("read");
-      close(fd);
-      return(1);
-    }
+  else if (fd == -1) /* If our function open fails, return error */
+  {
+    return(1);
+  }
 
-buffer[len] = '\0';
-printf("Read: %s", buffer); /* Displays the content of the file read to the standard output */
+while (read(fd, &buffer, 1))
+  {
+    write(1, &buffer, 1); /* Writes content from the buffer to stdout */
+  }
+
 close(fd); /* Always be closing */
 return(0);
 }
