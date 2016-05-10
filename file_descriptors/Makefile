@@ -1,4 +1,4 @@
-/* Program that prints the content of a file on the standard output */
+/* Makefile template */
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
