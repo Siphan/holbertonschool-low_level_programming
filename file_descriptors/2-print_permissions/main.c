@@ -32,12 +32,12 @@ if (argc != 2) /* If the number of arguments is not good, return error */
      {
        /* st_mode is the field which contains the file type code, and the access permission bits */
        print_char( (S_ISLNK(fileStat.st_mode)) ? 'l' :(S_ISDIR(fileStat.st_mode)) ? 'd' : '-'); /* Check if file is a symbolic link, else check if it's a directory */
-       print_char( (fileStat.st_mode & S_IRUSR) ? 'r' : '-'); /* Does owner has read permission? */
-       print_char( (fileStat.st_mode & S_IWUSR) ? 'w' : '-'); /* Does owner has write permission? */
-       print_char( (fileStat.st_mode & S_IXUSR) ? 'x' : '-'); /* Does owner has execute permission? */
-       print_char( (fileStat.st_mode & S_IRGRP) ? 'r' : '-'); /* Does group has read permission? */
-       print_char( (fileStat.st_mode & S_IWGRP) ? 'w' : '-'); /* Does group has write permission? */
-       print_char( (fileStat.st_mode & S_IXGRP) ? 'x' : '-'); /* Does group has execute permission? */
+       print_char( (fileStat.st_mode & S_IRUSR) ? 'r' : '-'); /* Does owner have read permission? */
+       print_char( (fileStat.st_mode & S_IWUSR) ? 'w' : '-'); /* Does owner have write permission? */
+       print_char( (fileStat.st_mode & S_IXUSR) ? 'x' : '-'); /* Does owner have execute permission? */
+       print_char( (fileStat.st_mode & S_IRGRP) ? 'r' : '-'); /* Does group have read permission? */
+       print_char( (fileStat.st_mode & S_IWGRP) ? 'w' : '-'); /* Does group have write permission? */
+       print_char( (fileStat.st_mode & S_IXGRP) ? 'x' : '-'); /* Does group have execute permission? */
        print_char( (fileStat.st_mode & S_IROTH) ? 'r' : '-'); /* Do others have read permission? */
        print_char( (fileStat.st_mode & S_IWOTH) ? 'w' : '-'); /* Do others have write permission? */
        print_char( (fileStat.st_mode & S_IXOTH) ? 'x' : '-'); /* Do others have execute permission? */
