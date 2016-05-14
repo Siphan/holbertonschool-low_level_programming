@@ -1,10 +1,12 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -pedantic
+CFLAGS = -Wall -Werror -Wextra -pedantic -l -L
 SRC = main.c
-OBJ =
+OBJ = main
 
 all: $(SRC)
-	$(CC) $(CFLAGS) $(SRC) $(OBJ)
+	$(CC) $(CFLAGS) $(SRC) -o $(OBJ)
 
 clean:
 	rm $(OBJ)
+
+	/* Makefile shall not relink */

@@ -40,7 +40,7 @@
      /* Create output file descriptor.
         If the destination file does not exist, create it.
       */
-     output_fd = open(argv[2], O_RDWR | O_CREAT, 0644);
+     output_fd = open(argv[2], O_WRONLY | O_CREAT, 0644);
      if(output_fd == -1){
          perror("open");
          return (1);
