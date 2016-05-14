@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * This program is a UNIX command line interpreter
  * Created by:
@@ -54,3 +55,12 @@ char *exec_argv[] = {"/bin/ls", "-l", NULL}; /* Executes ls program with the opt
   } while(0);
 return(0);
 }
+=======
+  	/*
+	 * This program is a UNIX command interpreter
+	 * Created by:
+	 * Asaia Palacios & Siphan Bou
+	 * Date:
+	 * May 11, 2016
+	 */
+>>>>>>> 778ff5a0742138852cc9f796789f7eb7e8134919
