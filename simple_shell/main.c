@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * This program is a UNIX command line interpreter
  * Created by:
