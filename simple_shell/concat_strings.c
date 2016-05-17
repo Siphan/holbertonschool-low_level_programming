@@ -1,4 +1,5 @@
-char *concat_strings(char *dest, const char *src) /* returns "string" + "string" */
+ /* Function that concatenates a string and returns "string" + "string" */
+char *concat_strings(char *dest, const char *src)
 {
   int count = 0;
   while(*dest)

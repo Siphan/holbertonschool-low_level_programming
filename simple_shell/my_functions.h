@@ -11,3 +11,4 @@ void print_string(char *str);
 char *concat_strings(char *dest, const char *src);
 int str_ncomp(char *s1, char *s2, int c);
 int str_len(const char *s);
+void set_return(int *ret_value, char *s);

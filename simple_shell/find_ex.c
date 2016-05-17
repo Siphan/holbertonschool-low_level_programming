@@ -1,8 +1,9 @@
+/* This function checks if a program exists for an input command */
 #include "my_functions.h"
 #include "libshell.h"
 #include <sys/stat.h>
 
-int find_ex(char *s) /* Check if program exists */
+int find_ex(char *s)
 {
   struct stat file_ex;
 
