@@ -1,3 +1,4 @@
+#include "my_functions.h"
 void exit_shell(char **command) {
   int value;
   write(2, "Exiting C-shell\n", 23); /* exiting */

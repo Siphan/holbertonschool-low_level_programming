@@ -24,10 +24,7 @@ int i;
 int j;
 char *print_env;
 char *path;
-/* int *ret_child; */
-int return_value;
-
-	return_value = 0;
+int exit_value;
 
 do { /* Prints promt at least once */
   write(1, "C-shell> ", 9);
@@ -44,10 +41,15 @@ do { /* Prints promt at least once */
     }
   }
   else if (strings_compare(args[0], "exit") == 0) { /* If input command is "exit", exits C-shell without creating a child process */
-    set_return(&return_value, args[1]);
-    printf("%s\n", "exit loop entered");
-    free(args);
-    return (0);
+    if (args[1] == NULL) {
+      free(args);
+      return (0);
+    }
+    else {
+      exit_value = string_to_integer(args[1]);
+      free(args);
+      return (exit_value);
+  }
       }
   else if (strings_compare(input, "$?") == 0) { /* If input command is "$?", return the status of the child process */
     print_number(status);

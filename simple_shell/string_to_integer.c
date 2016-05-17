@@ -1,4 +1,5 @@
 /* This function converts a string into an integer */
+#include "my_functions.h"
 int string_to_integer(char *s){
     int count = 0;
     int total;

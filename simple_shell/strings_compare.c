@@ -1,3 +1,5 @@
+/* This function compares if two strings are indentical */
+#include "my_functions.h"
 int strings_compare(char *s1, const char *s2)
 {
   while(*s1 ==*s2++)

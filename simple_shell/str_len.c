@@ -1,3 +1,4 @@
+#include "my_functions.h"
 int str_len(const char *str)
 {
   int total = 0;

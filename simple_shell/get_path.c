@@ -3,6 +3,8 @@
 #include "libshell.h"
 #include <stddef.h>
 
+int str_len(const char *str);
+
 char *get_path(char **env , char *cmd)
 {
   char **path;
