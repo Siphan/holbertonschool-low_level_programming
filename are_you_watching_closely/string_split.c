@@ -1,7 +1,3 @@
-// char **string_split(const char *str, char separator) {
-//
-// }
-
 #include <stdlib.h>
 char *create_space_for_word(char *str, char *dest, char separator);
 char *copy_word(char *str, char *dest, char separator);
