@@ -1,10 +1,14 @@
 #include "prototypes.h"
 
-/* Function that prints a string */
-void print_string(char *str)
+/*
+ * Function that prints a string
+ * one char at a time using print_char.c
+ */
+int print_string(char *str)
 {
-  int c;
-  for(c = 0; *(str + c); c++){
-    print_char( *(str + c));
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    print_char(str[i]);
   }
+  return i;
 }

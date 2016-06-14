@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Werror -Wextra -Wall -pedantic
-SRC = printf.c print_number.c print_longnumber.c decimal_to_hex.c print_string.c print_char.c
+SRC = printf.c print_number.c print_longnumber.c decimal_to_hex_lower.c decimal_to_hex_upper.c print_string.c print_char.c
 DEPS = prototypes.h
 OBJ = $(SRC:.c=.o)
 NAME = libprintf.a

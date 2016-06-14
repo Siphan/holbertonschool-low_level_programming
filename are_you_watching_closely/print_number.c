@@ -1,5 +1,10 @@
 #include "prototypes.h"
 
+/*
+ * Function that prints an int
+ * one char at a time using print_char.c
+ */
+ 
 void print_number(int n)
 {
   int count,i,temp,j,x; /* Declares integer variables  */
