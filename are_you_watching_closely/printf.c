@@ -50,17 +50,17 @@ int printf(const char *format, ...)
             print_number(next);
             size = size + 4;
           }
-          else if(format[i+1] == 'x' || format[i+1] == 'X'){
+          else if(format[i+1] == 'x' || format[i+1] == 'X') {
             long_num = va_arg(args, long);  /* Fetch Hexadecimal representation uppercase */
             decimal_to_hex_upper(long_num);
             size = size + 8;
           }
-          else if(format[i+1] == 'c'){ /* Fetch char argument */
+          else if(format[i+1] == 'c') { /* Fetch char argument */
             letter = va_arg(args, int);
             print_char(letter + '0');
             size = size + 1;
           }
-          else{
+          else {
             print_char(format[i]);
             print_char(format[i+1]);
             size = size + 2;
