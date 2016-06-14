@@ -1,34 +1,21 @@
-/*
- * main (varargs?)
- * do
- * read_line
- * string_split
- * string_compare? if so, compare to what?
- * string_to_integer?
- * print_number?
- * print_char
- * fork
- * get_path?
- * execve
- * don't forget to free all mallocs
- *
- * va_start
- * va_end
- */
+#include <limits.h>
 
-#include <stdio.h>
-#include "prototypes.h"
+int printf(const char *format, ...);
 
-int main(char **av) {
-  char *input;
-  /* char **args; */
-  /* pid_t pid; */
+int main(void)
+{
+  int len;
+  unsigned int ui;
+  void *addr;
 
-  do { /* Reads input at least once? */
-    input = read_line(0); /* Reads stdin and stores it into a malloced array */
-    /* args = string_split(input, ' '); Splits string from stdin into arguments to be interpreted */
-    printf("read_line ok");
-  } while (0); 
-  return(0);
+  len = printf("INTEGER{%d}, STRING{%s}\n", 98, "I am a string");
+  ui = (unsigned int)INT_MAX + 1;
+  addr = &len;
+  printf("previous length{%d}\n", len);
+  printf("UNSIGNED INTEGER{%u}\n", ui);
+  printf("UNSIGNED INTEGER{%u}\n", INT_MIN);
+  printf("ADDRESS{%p}\n", addr);
+  printf("HEXADECIMAL{%X}\n", 94111);
+  printf("UNKNOWN SPECIFIER{%Q}\n", len);
+  return (0);
 }
-

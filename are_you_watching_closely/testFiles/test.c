@@ -20,8 +20,8 @@ void Myprintf(char* format,...)
 	char *s;
 
 	/*Module 1: Initializing Myprintf's arguments */
-	va_list arg;
-	va_start(arg, format);
+	va_list arg; /* Linked list that will be able to contain our optional parameters */
+	va_start(arg, format); /* Initializing our va_list */
 
 	for(traverse = format; *traverse != '\0'; traverse++)
 	{
@@ -34,9 +34,15 @@ void Myprintf(char* format,...)
 		traverse++;
 
 		/*Module 2: Fetching and executing arguments */
+		/*
+		 * Macro va_arg will retrieve the next parameter given to your variadic function and return it.
+		 * The first argument is the va_list that contains your varags.
+		 * The second argument is the type of the parameter you want to retrieve.
+		 * This macro 'returns' a value of the type you passed as the second argument.
+		 */
 		switch(*traverse)
 		{
-			case 'c' : i = va_arg(arg,int);		/*Fetch char argument */
+			case 'c' : i = va_arg(arg,int);		/*Fetch char argument. */
 						putchar(i);
 						break;
 
@@ -64,7 +70,7 @@ void Myprintf(char* format,...)
 	}
 
 	/*Module 3: Closing argument list to necessary clean-up */
-	va_end(arg);
+	va_end(arg); /* Freeing our va_list */
 }
 
 char *convert(unsigned int num, int base)

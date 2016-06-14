@@ -1,4 +1,5 @@
 int print_char(char);
-char *read_line(const int fd);
-char **string_split(const char *str, char separator);
-
+void print_number(int);
+void print_longnumber(unsigned long int, int *);
+char *decimal_to_hex(unsigned int, int);
+void print_string(char *str);
