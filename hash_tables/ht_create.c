@@ -5,9 +5,10 @@ int print_char(char);
 
 HashTable *ht_create(unsigned int size);
 
-int main(int)
+int main()
 {
   unsigned int size;
+  size = 0;
 
   ht_create(size);
   /* print_char(&Hashtable); */
@@ -19,6 +20,7 @@ HashTable *ht_create(unsigned int size)
 {
   HashTable *new_table;
   unsigned int i;
+  int hash_value_t;
 
   /* Invalid size for table */
   if(size < 1){
