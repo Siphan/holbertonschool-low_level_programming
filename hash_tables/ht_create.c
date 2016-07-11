@@ -31,7 +31,7 @@ HashTable *ht_create(unsigned int size)
   }
 
   /* Attempt to allocate memory for the table itself */
-  if((new_table->array = malloc(sizeof(List *) * size)) == NULL) {
+  if((new_table->array = malloc(sizeof(List) * size)) == NULL) {
     return NULL;
   }
 
