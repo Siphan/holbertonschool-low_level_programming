@@ -11,7 +11,6 @@ int main()
   size = 0;
 
   ht_create(size);
-  /* print_char(&Hashtable); */
 
   return (0);
 }
@@ -20,7 +19,6 @@ HashTable *ht_create(unsigned int size)
 {
   HashTable *new_table;
   unsigned int i;
-  int hash_value_t;
 
   /* Invalid size for table */
   if(size < 1){
@@ -28,7 +26,7 @@ HashTable *ht_create(unsigned int size)
   }
 
   /* Attempt to allocate memory for the table structure */
-  if((new_table = malloc(sizeof(hash_value_t))) == NULL){
+  if((new_table = malloc(sizeof(HashTable))) == NULL){
     return NULL;
   }
 
