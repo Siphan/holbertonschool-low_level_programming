@@ -28,4 +28,10 @@ int _putchar(char c);
  */
 size_t print_listint(const listint_t *h);
 
+/*
+ * listint_len - count and return the number of elements
+ * in a linked listint_t list.
+ */
+size_t listint_len(const listint_t *h);
+
 #endif /* _LISTS_ */
