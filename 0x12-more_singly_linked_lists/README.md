@@ -20,6 +20,11 @@ typedef struct listint_s
 
 ## Functions
 ```c
+/**
+ * _putchar - write a char to stdout
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 int _putchar(char c);
 ```
 
