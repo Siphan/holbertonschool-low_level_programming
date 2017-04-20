@@ -11,18 +11,17 @@
  *
  * Return: the number of nodes in a list.
  */
-
 size_t print_listint(const listint_t *h)
 {
-  size_t m;
+    size_t m;
 
-  m = 0;
+    m = 0;
 
-  while (h != NULL)
-  {
-    printf("%d\n", h->n);
-    h = h->next;
-    m++;
-  }
-  return (m);
+    while (h != NULL)
+    {
+      printf("%d\n", h->n);
+      h = h->next;
+      m++;
+    }
+    return (m);
 }
