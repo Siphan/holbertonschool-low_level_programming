@@ -34,3 +34,8 @@ size_t listint_len(const listint_t *h);
 /* add_nodeint - add a node to the beginning of a linked list */
 listint_t *add_nodeint(listint_t **head, const int n);
 ```
+
+```c
+/* add_nodeint_end - add a new node to the end of a listint_t list */
+listint_t *add_nodeint_end(listint_t **head, const int n);
+```
