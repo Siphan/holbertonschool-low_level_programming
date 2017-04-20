@@ -1,6 +1,5 @@
 *~
 a.out
 *main.c
-test/
-test*
+*test*
 _putchar.c
