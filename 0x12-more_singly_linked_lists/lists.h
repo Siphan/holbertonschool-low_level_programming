@@ -15,23 +15,13 @@ typedef struct listint_s
         struct listint_s *next;
 } listint_t;
 
-/*
- * _putchar - write a char to stdout
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c);
-
-/*
- * print_listint - print the data stored in each element of a list.
- * Return: the number of nodes in a list.
- */
+/* print_listint - print the elements of a linked list */
 size_t print_listint(const listint_t *h);
 
-/*
- * listint_len - count and return the number of elements
- * in a linked listint_t list.
- */
+/* listint_len - return the number of elements in a linked list */
 size_t listint_len(const listint_t *h);
+
+/* add_nodeint - add a node to the beginning of a linked list */
+listint_t *add_nodeint(listint_t **head, const int n);
 
 #endif /* _LISTS_ */
