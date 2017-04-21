@@ -1,6 +1,9 @@
 #ifndef _HOLBERTON.H_
 #define _HOLBERTON.H_
 
+/* Function that writes input character to stdout */
+int _putchar(char c);
+
 /* Function that prints a string, followed by a new line */
 void _puts_recursion(char *s);
 
@@ -29,6 +32,6 @@ int is_palindrome(char *s);
  * Function that compares two strings and returns 1 if the strings
  * can be considered identical, otherwise return 0.
  */
-int wildcmp(char *s1, char *s2); 
+int wildcmp(char *s1, char *s2);
 
 #endif _HOLBERTON.H_

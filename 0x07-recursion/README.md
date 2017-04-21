@@ -3,6 +3,11 @@
 ## Functions
 
 ```c
+/* Function that writes input character to stdout */
+int _putchar(char c);
+```
+
+```c
 /* Function that prints a string, followed by a new line */
 void _puts_recursion(char *s);
 ```
