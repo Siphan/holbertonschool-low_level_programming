@@ -37,10 +37,7 @@ int is_palindrome(char *s);
 /* Function that returns 1 if a string is a palindrome and 0 if not */
 int check_palindrome(char *s, int i);
 
-/*
- * Function that compares two strings and returns 1 if the strings
- * can be considered identical, otherwise return 0.
- */
+/* Function that checks if two strings can be considered identical */
 int wildcmp(char *s1, char *s2);
 
 #endif /* HOLBERTON */
