@@ -4,6 +4,8 @@
 /**
  * free_listint - free a list of type struct listint_t.
  * @head: head node of type struct listint_t.
+ *
+ * Return: nothing.
  */
 void free_listint(listint_t *head)
 {

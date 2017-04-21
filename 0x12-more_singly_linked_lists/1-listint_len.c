@@ -3,9 +3,7 @@
 #include "lists.h"
 
 /**
- * listint_len - count and return the number of elements
- * in a linked listint_t list.
- *
+ * listint_len - count the number of elements in a linked listint_t list.
  * @h: head node in the singly linked list.
  *
  * Return: the number of nodes in a list.

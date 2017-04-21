@@ -3,7 +3,6 @@
 
 /**
  * add_nodeint - add a node to the beginning of a singly linked list.
- *
  * @head: pointer to the pointer of the first element of a linked list.
  * @n: value held at node.
  *
