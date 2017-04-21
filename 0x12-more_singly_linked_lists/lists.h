@@ -37,6 +37,6 @@ void free_listint2(listint_t **head);
  * pop_listint - delete the head node of a listint_t linked list
  * and return data stored in head node.
  */
-int pop_listint(listint_t **head)
+int pop_listint(listint_t **head);
 
 #endif /* _LISTS_ */
