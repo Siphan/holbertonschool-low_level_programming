@@ -20,8 +20,8 @@ int _pow_recursion(int x, int y)
     return (-1);
   }
 
-  /* If exponent is 0, result is always 1 */
-  else if (y == 0)
+  /* If number is 1 or if exponent is 0, result is always 1 */
+  else if ((x == 1) || (y == 0)) 
   {
     return (1);
   }
