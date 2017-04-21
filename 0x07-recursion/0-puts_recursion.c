@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _puts_recursion - print a string to sdtout, followed by a new line
- * @s: input string
+ * _puts_recursion - print a string to sdtout, followed by a new line.
+ * @s: input string.
  *
  * Return: nothing.
  */
