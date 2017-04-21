@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON.H_
-#define _HOLBERTON.H_
+#ifndef HOLBERTON
+#define HOLBERTON
 
 /* Function that writes input character to stdout */
 int _putchar(char c);
@@ -34,4 +34,4 @@ int is_palindrome(char *s);
  */
 int wildcmp(char *s1, char *s2);
 
-#endif _HOLBERTON.H_
+#endif /* HOLBERTON */
