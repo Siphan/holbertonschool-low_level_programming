@@ -28,6 +28,9 @@ int find_root(int n, int root);
 /* Function that returns 1 if the input integer is a prime number, 0 if not */
 int is_prime_number(int n);
 
+/* Function that returns 1 if the input integer is a prime number, 0 if not */
+int check_prime(int n, int i);
+
 /* Function that returns 1 if a string is a palindrome and 0 if not */
 int is_palindrome(char *s);
 

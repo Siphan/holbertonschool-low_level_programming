@@ -38,8 +38,18 @@ int _sqrt_recursion(int n);
 ```
 
 ```c
+/* Function that returns the natural square root of a number */
+int find_root(int n, int root);
+```
+
+```c
 /* Function that returns 1 if the input integer is a prime number, 0 if not */
 int is_prime_number(int n);
+```
+
+```c
+/* Function that returns 1 if the input integer is a prime number, 0 if not */
+int check_prime(int n, int i);
 ```
 
 ```c
