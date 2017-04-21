@@ -27,4 +27,7 @@ listint_t *add_nodeint(listint_t **head, const int n);
 /* add_nodeint_end - add a new node to the end of a listint_t list */
 listint_t *add_nodeint_end(listint_t **head, const int n);
 
+/* free_listint - free a list of type struct listint_t */
+void free_listint(listint_t *head);
+
 #endif /* _LISTS_ */
