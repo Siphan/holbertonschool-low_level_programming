@@ -44,3 +44,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 /* free_listint - free a list of type struct listint_t */
 void free_listint(listint_t *head);
 ```
+
+```c
+/* free_listint2 - free a list of type struct listint_t and set head to NULL */
+void free_listint2(listint_t **head);
+```
