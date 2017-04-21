@@ -37,6 +37,18 @@ void free_listint2(listint_t **head);
  * pop_listint - delete the head node of a listint_t linked list
  * and return data stored in head node.
  */
-int pop_listint(listint_t **head)
+int pop_listint(listint_t **head);
+
+/* get_nodeint_at_index - return the nth node of a listint_t linked list */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+
+/* sum_listint - return the sum of all the data (n) of a linked list */
+int sum_listint(listint_t *head);
+
+/* insert_nodeint_at_index - insert a new node at a given position (index) */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+
+/* delete_nodeint_at_index - delete a node at a given position (index) */
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 #endif /* _LISTS_ */
