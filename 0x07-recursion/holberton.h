@@ -22,6 +22,9 @@ int _pow_recursion(int x, int y);
 /* Function that returns the natural square root of a number */
 int _sqrt_recursion(int n);
 
+/* Function that returns the natural square root of a number */
+int find_root(int n, int root);
+
 /* Function that returns 1 if the input integer is a prime number, 0 if not */
 int is_prime_number(int n);
 
