@@ -1,4 +1,6 @@
 # Maze Project
+
+A game inspired by Wolfenstein3d, using ray casting.
 --------------
 
 * Author: ```Siphan Bou```
