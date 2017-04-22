@@ -14,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node;
 	unsigned long int index, size;
 
-	if (ht == NULL || key == NULL || value == NULL)
+	if ((ht == NULL) || (key == NULL) || (value == NULL))
 		return (0);
 
 	/* Find the index */
@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, size);
 
 	/* Add the key/value pair at the index */
-	if (ht->array[index] != NULL && strcmp(ht->array[index]->key, key) == 0)
+	if ((ht->array[index] != NULL) && (strcmp(ht->array[index]->key, key) == 0))
 	{
 		ht->array[index]->value = strdup(value);
 		return (1);
