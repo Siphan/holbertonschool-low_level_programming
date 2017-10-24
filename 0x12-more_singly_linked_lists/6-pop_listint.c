@@ -14,17 +14,17 @@ int pop_listint(listint_t **head)
 
 	if (head && *head)
 	{
-        	if ((*head)->next != NULL)
-        {
-            	next_node = (*head)->next;
-        }
-        data = (*head)->n;
-        free(*head);
-        *head = next_node;
-        }
-        else
-        {
-            	return (0);
-        }
-        return (data);
+		if ((*head)->next != NULL)
+	{
+		next_node = (*head)->next;
+	}
+	data = (*head)->n;
+	free(*head);
+	*head = next_node;
+	}
+	else
+	{
+		return (0);
+	}
+	return (data);
 }

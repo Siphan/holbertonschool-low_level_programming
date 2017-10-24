@@ -24,17 +24,15 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		len++;
 	}
 
- 	if ((!head) || (len < index))
-  	{
+	if ((!head) || (len < index))
 		return (NULL);
-  	}
 
 	for (i = 0; i < len; i++)
 	{
 		if (i == index)
-    		{
+		{
 			return (head);
-    		}
+		}
 		head = head->next;
 	}
 	return (head);
