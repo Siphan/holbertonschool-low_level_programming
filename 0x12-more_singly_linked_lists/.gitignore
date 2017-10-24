@@ -3,3 +3,5 @@ a.out
 *main.c
 *test*
 *SYM/
+.DS_Store
+.vscode/
