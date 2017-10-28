@@ -1,6 +1,8 @@
 #ifndef _LISTS_
 #define _LISTS_
 
+#include <string.h>
+
 /**
  * struct listint_s - singly linked list
  * @n: integer
@@ -50,5 +52,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 
 /* delete_nodeint_at_index - delete a node at a given position (index) */
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
+
+/* reverse_listint - reverse a linked list */
+listint_t *reverse_listint(listint_t **head);
 
 #endif /* _LISTS_ */
