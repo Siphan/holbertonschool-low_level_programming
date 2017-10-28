@@ -9,7 +9,7 @@
 int _sqrt_recursion(int n)
 /* Call the recursive func that either returns the square root of n or -1 */
 {
-    return (find_root(n, 0));
+		return (find_root(n, 0));
 }
 
 /**
@@ -21,20 +21,20 @@ int _sqrt_recursion(int n)
  */
 int find_root(int n, int root)
 {
-   if (root * root == n)
-   {
-     return (root); /* The square root of n is found */
-   }
+	if (root * root == n)
+	{
+		return (root); /* The square root of n is found */
+	}
 
-   /* If no integer square root found or if n is negative, returns -1 */
-   else if (root * root > n)
-   {
-     return (-1);
-   }
+	/* If no integer square root found or if n is negative, returns -1 */
+	else if (root * root > n)
+	{
+		return (-1);
+	}
 
-   /* Loops again until either of the 2 conditions above is met */
-   else
-   {
-     return (find_root(n, (root + 1)));
-   }
+	/* Loops again until either of the 2 conditions above is met */
+	else
+	{
+		return (find_root(n, (root + 1)));
+	}
 }
