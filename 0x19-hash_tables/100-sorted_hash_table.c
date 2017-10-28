@@ -16,15 +16,11 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 	new_ht = malloc(sizeof(shash_table_t));
 	if (!new_ht || size < 1)
-	{
 		return (NULL);
-	}
 
 	new_ht->array = malloc(sizeof(shash_node_t *) * size);
 	if (!new_ht->array)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < size; i++)
 	{
@@ -55,9 +51,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	i = 0;
 	new_node = malloc(sizeof(shash_node_t));
 	if (!new_node || !key || !ht || !value)
-	{
 		return (0);
-	}
 	index = key_index((const unsigned char *)key, ht->size);
 	for (tmp_node = ht->array[index]; tmp_node; tmp_node = tmp_node->next)
 	{
@@ -103,9 +97,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	unsigned long int index;
 
 	if ((ht == NULL) || (key == NULL))
-	{
 		return (NULL);
-	}
 
 	index = key_index((const unsigned char *)key, ht->size);
 	for (node = ht->array[index]; node; node = node->next)
@@ -132,9 +124,7 @@ void shash_table_print(const shash_table_t *ht)
 
 	i = 0;
 	if ((ht == NULL) || (ht->shead == NULL))
-	{
 		return;
-	}
 
 	printf("{");
 	for (node = ht->shead; node; node = node->snext)
@@ -165,9 +155,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 	i = 0;
 	if ((ht == NULL) || (ht->stail == NULL))
-	{
 		return;
-	}
 
 	printf("{");
 	for (node = ht->stail; node != NULL; node = node->sprev)
@@ -197,10 +185,7 @@ void shash_table_delete(shash_table_t *ht)
 	shash_node_t *node, *temp_node;
 
 	if (ht == NULL)
-	{
 		return;
-	}
-
 	for (i = 0; i < ht->size; i++)
 	{
 		node = ht->array[i];
@@ -228,7 +213,7 @@ void shash_table_delete(shash_table_t *ht)
 void shash_table_sort(shash_table_t *ht, shash_node_t *new, shash_node_t *tmp)
 {
 	shash_node_t *previous;
-  previous = new;
+	previous = new;
 
 	if (ht->shead == NULL) /* If no nodes in sorted list */
 	{

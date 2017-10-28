@@ -10,32 +10,32 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-  unsigned long int index;
-  hash_node_t *temp_node;
+	unsigned long int index;
+	hash_node_t *temp_node;
 
-  temp_node = NULL;
-  index = 0;
+	temp_node = NULL;
+	index = 0;
 
-  /* Retrieve index */
-  index = key_index((const unsigned char *) key, ht->size);
-  /* Retrieve node at index */
-  temp_node = ht->array[index];
+	/* Retrieve index */
+	index = key_index((const unsigned char *) key, ht->size);
+	/* Retrieve node at index */
+	temp_node = ht->array[index];
 
-  while (temp_node != NULL)
-  {
-    /* If key not found */
-    if (temp_node->key == NULL)
-    {
-      break;
-    }
+	while (temp_node != NULL)
+	{
+		/* If key not found */
+		if (temp_node->key == NULL)
+		{
+			break;
+		}
 
-    /* If key found, retrieve value */
-    else if (strcmp(key, temp_node->key) == 0)
-    {
-      return (temp_node->value);
-    }
-  }
+		/* If key found, retrieve value */
+		else if (strcmp(key, temp_node->key) == 0)
+		{
+			return (temp_node->value);
+		}
+	}
 
-  /* If key not found */
-  return (NULL);
+	/* If key not found */
+	return (NULL);
 }
