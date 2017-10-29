@@ -1,5 +1,5 @@
 #SOURCES specifies which files to compile
-SOURCES = src/main.c
+SOURCES = src/main.c src/init_instance.c src/draw_maze.c
 
 #CC specifies which compiler we're using
 CC = gcc
@@ -16,7 +16,7 @@ OBJ = maze
 
 #This is the target that compiles our executable
 all : $(SOURCES)
-	$(CC) $(SOURCES) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJ)
+	$(CC) $(SOURCES) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJ) `sdl2-config --libs` -lSDL2_ttf
 
 #Run make clean to remove object files before running make again
 clean:
