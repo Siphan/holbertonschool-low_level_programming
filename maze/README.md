@@ -9,8 +9,10 @@ A game inspired by Wolfenstein3d, using ray casting.
 * Library: ```SDL2```
 * Compiles on both ```Mac OS X``` and ```Debian/Ubuntu```
 
+* Directory structure:
+----------------------
 * ```src```: source files
-* ```inc```: headers
+* ```inc```: header files
 
 --------------------------------------------------------
 ## Functions

@@ -4,7 +4,7 @@
 /**
  * insert_nodeint_at_index - insert a new node at a given index in a list.
  * @head: head node of type struct listint_t.
- * @index: index for insertion of new node.
+ * @idx: index for insertion of new node.
  * @n: data to be inserted into new node.
  *
  * Return: the address of the new node, or NULL if it failed.
