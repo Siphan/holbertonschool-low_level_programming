@@ -1,5 +1,6 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
+#include "../inc/sdl_instance.h"
 
 /**
  * main - initialize an SDL2 instance
@@ -9,54 +10,64 @@
  */
 int main(void)
 {
-	/* The window we'll be rendering to */
-	SDL_Window *window;
-	SDL_Renderer *renderer;
-	/* The surface contained by the window */
-	SDL_Surface *screenSurface;
+	SDL_Instance instance;
 
-	/* Initialize SDL. Needed to call any SDL function. */
-	if (SDL_Init(SDL_INIT_VIDEO) != 0)
+	if (init_instance(&instance) != 0)
 	{
 		/* SDL_GetError returns the latest error produced by any SDL function */
-		fprintf(stderr, "Unable to intialize SDL: %s\n", SDL_GetError());
+		fprintf( stderr, "Unable to initialize SDL instance: %s\n", SDL_GetError() );
 		return (1);
 	}
 
-	/* Create a new Window instance */
-	window = SDL_CreateWindow("A-MAZE-ING \\o/",
-		SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1260, 720, SDL_WINDOW_SHOWN);
-	if (window == NULL)
+	return (0);
+}
+
+/* Initialize a new instance of SDL
+	Return 0 on success, 1 on fail
+ */
+int init_instance(SDL_Instance *instance)
+{
+	/* Initialize SDl */
+	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
-		fprintf(stderr, "SDL_CreateWindow Error: %s\n", SDL_GetError());
+		fprintf( stderr, "Unable to initialize SDL: %s\n", SDL_GetError() );
+		return (1);
+	}
+
+	/* Create a new SDL_Window instance */
+	instance->window = SDL_CreateWindow(WINDOW_TITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, 0);
+	if (instance->window == NULL)
+	{
+		fprintf( stderr, "Unable to create window: %s\n", SDL_GetError() );
 		SDL_Quit();
 		return (1);
 	}
+
 	/* Create a new Renderer instance linked to the Window */
-	renderer = SDL_CreateRenderer(window, -1,
+	instance->renderer = SDL_CreateRenderer(instance->window, -1,
 		SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	if (renderer == NULL)
+	if (instance->renderer == NULL)
 	{
-		SDL_DestroyWindow(window);
+		SDL_DestroyWindow(instance->window);
 		fprintf(stderr, "SDL_CreateRenderer Error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return (1);
 	}
 
 	/* Get window surface */
-	screenSurface = SDL_GetWindowSurface(window);
+	instance->screenSurface = SDL_GetWindowSurface(instance->window);
 
 	/* Fill the surface white */
-	SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0xFF));
+	SDL_FillRect(instance->screenSurface, NULL, SDL_MapRGB(instance->screenSurface->format, 0xFF, 0xFF, 0xFF));
 
 	/* Update the surface */
-	SDL_UpdateWindowSurface(window);
+	SDL_UpdateWindowSurface(instance->window);
 
 	/* Wait two seconds */
-	SDL_Delay(5000);
+	SDL_Delay(2000);
 
 	/* Destroy window to free its memory */
-	SDL_DestroyWindow(window);
+	SDL_DestroyWindow(instance->window);
 
 	/* Quit SDL subsystems after everything is deallocated */
 	SDL_Quit();
