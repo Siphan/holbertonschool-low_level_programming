@@ -1,5 +1,5 @@
 #SOURCES specifies which files to compile
-SOURCES = src/main.c src/init_instance.c src/draw_maze.c
+SOURCES = src/main.c
 
 #CC specifies which compiler we're using
 CC = gcc
