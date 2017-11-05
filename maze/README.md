@@ -13,9 +13,9 @@ The game uses ray casting technique to create the apparent 3D nature of the maze
 
 
 ## Directory structure:
-	`src`: source files
-	`inc`: header files
-	`imgs`: image files
+* ```src```: source files
+* ```inc```: header files
+* ```imgs```: image files
 
 --------------------------------------------------------
 
