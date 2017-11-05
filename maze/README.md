@@ -2,7 +2,7 @@
 
 This project is a first person 3D game inspired by Wolfenstein3d, where the player has to find a way out of a maze. 
 The game uses ray casting technique to create the apparent 3D nature of the maze.
---------------------------------------------------------------------------------------------------------------------
+
 
 * Author: ```Siphan Bou```
 * Date: ```October 29, 2017```
@@ -14,7 +14,8 @@ The game uses ray casting technique to create the apparent 3D nature of the maze
 
 ## Directory structure:
 	`src`: source files
-	`inc`: header file
+	`inc`: header files
+	`imgs`: image files
 
 --------------------------------------------------------
 
@@ -24,8 +25,8 @@ The game uses ray casting technique to create the apparent 3D nature of the maze
 To launch the game:
 
 * Install SDL2
-	* (On Mac OS)[http://lazyfoo.net/tutorials/SDL/01_hello_SDL/mac/index.php]
-	* (On Linux)[http://lazyfoo.net/tutorials/SDL/01_hello_SDL/linux/index.php]
+	* [On Mac OS](http://lazyfoo.net/tutorials/SDL/01_hello_SDL/mac/index.php)
+	* [On Linux](http://lazyfoo.net/tutorials/SDL/01_hello_SDL/linux/index.php)
 
 * Clone, compile, and run the program via the command line:
 ```
@@ -40,13 +41,14 @@ Alternatively, if you're not using `make`, you can type the following command to
 gcc src/*c -Wall -Werror -Wextra -pedantic -I./inc -lSDL2 -o maze `sdl2-config --libs` -lSDL2_ttf
 ```
 
-A window will pop up with the game, like thus:\s\s
+A window will pop up with the game, like thus:
+
 <img src="imgs/initial_load.png" width=50% height=50% alt="Screenshot start game" align="middle">
 
-North facing walls are gray\s\s
-South facing walls are silver\s\s
-West facing walls are blue\s\s
-East facing walls are red\s\s 
+* North facing walls are gray
+* South facing walls are silver
+* West facing walls are blue
+* East facing walls are red
 
 ----------------------------------------------------------------------------------------------------------------
 ## How to play
