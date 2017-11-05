@@ -1,11 +1,11 @@
 #include "maze.h"
 
 /**
- * check_vertical_intersections - of ray and grid for walls
+ * check_vert_intersect - of ray and grid for walls
  * @vert_coords: pointer to coords for where wall was found
  * @ray_angle: absolute angle of ray being cast (degrees)
  * @player: pointer to player instance
- * @map: pointer to map multi-dim array
+ * @map: pointer to multi-dimensional array map
  *
  * Return: 0 if no wall was detected, 1 if a wall was detected
  */

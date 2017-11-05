@@ -21,7 +21,7 @@ float calculate_distance(Player_POV *player, float *coords)
  * find_distance - Find distance to closest wall
  * @ray_angle: absolute angle of ray being cast (degrees)
  * @player: pointer to player instance
- * @map: pointer to map multi-dim array
+ * @map: pointer to multi-dimensional array map
  * @horizontal_or_vert: whether closest wall was horizontal or vertical
  *
  * Return: distance to closest wall from player

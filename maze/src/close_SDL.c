@@ -2,7 +2,7 @@
 
 /**
  * close_SDL - Perform memory freeing tasks related to SDL before quitting
- * @instance: SDL instance
+ * @instance: pointer to our SDL instance
  */
 void close_SDL(SDL_Instance *instance)
 {

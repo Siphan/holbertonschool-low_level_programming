@@ -4,7 +4,7 @@
  * draw_scene - Draw what will be shown on window during loop
  * @instance: SDL instance
  * @player: pointer to player instance
- * @map: pointer to map multi-dim array
+ * @map: pointer to multi-dimensional array map
  */
 void draw_scene(SDL_Instance instance, Player_POV *player, char
 	(*map)[MAP_WIDTH])

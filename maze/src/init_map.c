@@ -4,7 +4,7 @@
 /**
  * init_map - Initialize value of map
  *
- * Return: pointer to an array that represents the map
+ * Return: pointer to a 2D array that represents the map
  */
 char (*init_map(void))[MAP_WIDTH]
 {

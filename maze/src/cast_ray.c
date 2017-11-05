@@ -4,7 +4,7 @@
  * cast_ray - Cast ray to determine attributes of column to draw
  * @ray_angle: absolute angle of ray being cast (degrees)
  * @player: pointer to player instance
- * @map: pointer to map multi-dim array
+ * @map: pointer to multi-dimensional array map
  * @line: line to draw
  */
 void cast_ray(float ray_angle, Player_POV *player, char (*map)[MAP_WIDTH],
