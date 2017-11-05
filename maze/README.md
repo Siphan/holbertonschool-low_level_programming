@@ -57,9 +57,9 @@ A window will pop up with the game, like thus:
 
 * You can move the player by pressing the `w`, `a`, `s`, and `d` keys.
 	* `w` to move forward
+	* `s` to move back
 	* `a` to move left
-	* `s` to move right
-	* `d` to move back
+	* `d` to move right
 
 * You can quit the game in 3 manners:
 	* By pressing the `esc` key
